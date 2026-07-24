@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cybersecurity Case Files</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">
+      <a href="index.html">CHUKWU PG</a>
+    </div>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg id="sunIcon" viewBox="0 0 24 24" style="display:none;">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+        </svg>
+        <svg id="moonIcon" viewBox="0 0 24 24">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="page-header">
+    <a href="index.html" class="back-link">← Back</a>
+    <h1>Cybersecurity Case Files</h1>
+    <p class="section-subtitle">
+      Practical investigations into vulnerabilities, exploitation techniques, and defensive countermeasures.
+    </p>
+  </div>
+
+  <div class="project-list">
+
+    <div class="project-card">
+      <p class="case-label">CASE FILE</p>
+      <h3>GVM Vulnerability Exploitation</h3>
+      <p>
+        Conducted vulnerability assessment using OpenVAS (GVM), identified critical exposure,
+        and validated risk through controlled exploitation. Mapped findings to CVE data.
+      </p>
+      <p class="tags">GVM · CVE · Exploitation · Linux</p>
+      <a href="#">View Documentation →</a>
+    </div>
+
+    <div class="project-card">
+      <p class="case-label">CASE FILE</p>
+      <h3>Advanced Network Traffic Analysis</h3>
+      <p>
+        Analyzed DNS tunneling, FTP, and encrypted traffic using Wireshark to identify anomalies
+        and covert communication techniques.
+      </p>
+      <p class="tags">Wireshark · DNS · Traffic Analysis</p>
+      <a href="#">View Documentation →</a>
+    </div>
+
+    <div class="project-card">
+      <p class="case-label">CASE FILE</p>
+      <h3>SSH Hardening Lab</h3>
+      <p>
+        Hardened SSH configuration with UFW and Fail2Ban, reducing attack surface and preventing brute-force attempts.
+      </p>
+      <p class="tags">Linux · SSH · Hardening</p>
+      <a href="#">View Documentation →</a>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+const themeToggle = document.getElementById('themeToggle');
+const sunIcon = document.getElementById('sunIcon');
+const moonIcon = document.getElementById('moonIcon');
+const html = document.documentElement;
+
+const savedTheme = localStorage.getItem('theme') || 'light';
+html.setAttribute('data-theme', savedTheme);
+updateIcons(savedTheme);
+
+function updateIcons(theme) {
+  if (theme === 'dark') {
+    sunIcon.style.display = 'block';
+    moonIcon.style.display = 'none';
+  } else {
+    sunIcon.style.display = 'none';
+    moonIcon.style.display = 'block';
+  }
+}
+
+function toggleTheme() {
+  const current = html.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+  updateIcons(next);
+}
+
+window.addEventListener('storage', (e) => {
+  if (e.key === 'theme') {
+    const newTheme = e.newValue || 'light';
+    html.setAttribute('data-theme', newTheme);
+    updateIcons(newTheme);
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('theme') || 'light';
+  html.setAttribute('data-theme', saved);
+  updateIcons(saved);
+});
+
+themeToggle.addEventListener('click', toggleTheme);
+</script>
+
+</body>
+</html>

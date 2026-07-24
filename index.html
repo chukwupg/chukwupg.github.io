@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CHUKWU PG | Cybersecurity Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="#top">CHUKWU PG</a>
+      </div>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="#projects">Case Files</a>
+          <a href="#experience">Experience</a>
+          <a href="#certifications">Certifications</a>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg id="sunIcon" viewBox="0 0 24 24" style="display:none;">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+          </svg>
+          <svg id="moonIcon" viewBox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="top" class="container">
+    <h1>CHUKWU PRAISEGOD</h1>
+    <p class="subtitle">Cybersecurity Analyst · Ethical Hacking</p>
+    <div class="links">
+      <a href="https://github.com/chukwupg/">GitHub</a>
+      <a href="https://linkedin.com/in/chukwupg/">LinkedIn</a>
+      <a href="https://x.com/chukwupg/">X</a>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section class="container">
+    <h2>About</h2>
+    <p>
+      I design and document hands-on cybersecurity labs centered on vulnerability discovery, exploitation, and system hardening.
+      My work prioritizes practical security testing and realistic attack scenarios to bridge the gap between theory and real-world application.
+    </p>
+    <br>
+    <p>
+      I approach systems from both defensive and offensive perspectives—analyzing, securing, and actively breaking them to understand their architecture, weaknesses, and failure points.
+      My focus includes network traffic analysis, attack simulation, and iterative lab environments that reflect real-world threats, with a growing specialization in offensive security.
+    </p>
+  </section>
+
+  <!-- CASE FILES -->
+  <section id="projects" class="container">
+    <h2>Case Files</h2>
+    <p class="section-subtitle">
+      Hands-on cybersecurity labs focused on exploitation, detection, and system hardening.
+    </p>
+    <div class="category-grid">
+      <a href="cybersecurity.html" class="category-card">
+        <h3>Cybersecurity</h3>
+        <p>Penetration testing, exploitation labs, and attack simulations.</p>
+        <span>Explore projects →</span>
+      </a>
+      <a href="tools.html" class="category-card">
+        <h3>Tools</h3>
+        <p>Custom scripts, utilities, and security tooling.</p>
+        <span>Explore tools →</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="container">
+    <h2>Experience</h2>
+    <p>
+      Hands-on cybersecurity lab development focused on vulnerability exploitation, network traffic analysis, and system hardening.
+      Built and tested real-world attack scenarios in controlled environments to strengthen both offensive and defensive security skills.
+    </p>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="container">
+    <h2>Certifications</h2>
+    <div class="cert-list">
+      <div class="cert-item">
+        <span class="cert-dot"></span>
+        <span class="cert-name">Cisco Junior Cybersecurity Analyst</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-dot"></span>
+        <span class="cert-name">Cisco Certified Network Technician</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-dot"></span>
+        <span class="cert-name">ISC2 Certified in Cybersecurity (CC)</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-dot cert-dot-ongoing"></span>
+        <span class="cert-name">Certified Ethical Hacker (Ongoing)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="container">
+    <h2>Skills & Tools</h2>
+    <div class="skills">
+      <div class="skill-group">
+        <h4>Offensive</h4>
+        <p>Nmap · Metasploit · Burp Suite · OWASP ZAP · SET · BeEF</p>
+      </div>
+      <div class="skill-group">
+        <h4>Defensive</h4>
+        <p>Wireshark · Sysinternals</p>
+      </div>
+      <div class="skill-group">
+        <h4>Systems</h4>
+        <p>Linux Administration · Windows Administration · OS Hardening</p>
+      </div>
+      <div class="skill-group">
+        <h4>Cloud</h4>
+        <p>AWS · S3 · CloudTrail · EventBridge · SNS</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p>© 2026 PRAISEGOD C. (This portfolio is a work in progress)</p>
+  </footer>
+
+<script>
+// ===== THEME TOGGLE =====
+const themeToggle = document.getElementById('themeToggle');
+const sunIcon = document.getElementById('sunIcon');
+const moonIcon = document.getElementById('moonIcon');
+const html = document.documentElement;
+
+const savedTheme = localStorage.getItem('theme') || 'light';
+html.setAttribute('data-theme', savedTheme);
+updateIcons(savedTheme);
+
+function updateIcons(theme) {
+  if (theme === 'dark') {
+    sunIcon.style.display = 'block';
+    moonIcon.style.display = 'none';
+  } else {
+    sunIcon.style.display = 'none';
+    moonIcon.style.display = 'block';
+  }
+}
+
+function toggleTheme() {
+  const current = html.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+  updateIcons(next);
+}
+
+window.addEventListener('storage', (e) => {
+  if (e.key === 'theme') {
+    const newTheme = e.newValue || 'light';
+    html.setAttribute('data-theme', newTheme);
+    updateIcons(newTheme);
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('theme') || 'light';
+  html.setAttribute('data-theme', saved);
+  updateIcons(saved);
+});
+
+themeToggle.addEventListener('click', toggleTheme);
+
+// ===== SCROLL SPY =====
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 100;
+    if (scrollY >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+  navLinks.forEach(a => {
+    a.classList.remove("active");
+    if (a.getAttribute("href") === "#" + current) {
+      a.classList.add("active");
+    }
+  });
+});
+</script>
+
+</body>
+</html>
