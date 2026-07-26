@@ -40,7 +40,7 @@
   <!-- HERO -->
   <header id="top" class="container">
     <h1>CHUKWU PRAISEGOD</h1>
-    <p class="subtitle">Cybersecurity Analyst · Ethical Hacking</p>
+    <p class="subtitle">Cybersecurity Analyst · Ethical Hacker · Penetration Tester</p>
     <div class="links">
       <a href="https://github.com/chukwupg/">GitHub</a>
       <a href="https://linkedin.com/in/chukwupg/">LinkedIn</a>
@@ -52,12 +52,15 @@
   <section class="container">
     <h2>About</h2>
     <p>
-      I design and document hands-on cybersecurity labs centered on vulnerability discovery, exploitation, and system hardening.
-      My work prioritizes practical security testing and realistic attack scenarios to bridge the gap between theory and real-world application.
+      I design and document hands-on cybersecurity labs centered around network security, malware analysis, vulnerability assessment, exploitation, and system hardening.
     </p>
-    <br>
     <p>
-      I approach systems from both defensive and offensive perspectives—analyzing, securing, and actively breaking them to understand their architecture, weaknesses, and failure points.
+      My work prioritizes practical exercises, deep analysis, and realistic attack scenarios to bridge the gap between theory and real-world application.
+    </p>
+    <p>
+      I approach systems from both defensive and offensive perspectives; analyzing, securing, and actively breaking them to understand their architecture, weaknesses, and failure points in order to make informed decisions about security.
+    </p>
+    <p>
       My focus includes network traffic analysis, attack simulation, and iterative lab environments that reflect real-world threats, with a growing specialization in offensive security.
     </p>
   </section>
@@ -70,12 +73,12 @@
     <div class="category-grid">
       <a href="cybersecurity.html" class="category-card">
         <h3>Projects</h3>
-        <p>Penetration testing, exploitation labs, and attack simulations.</p>
+        <p>Traffic analysis, malware analysis, vulnerability assessment, penetration testing, exploitation labs, and attack simulations.</p>
         <span>Explore projects →</span>
       </a>
       <a href="https://basedonbelieve.notion.site/Cybersecurity-Lab-Hub-39d8e85516f280a1a6dbf649016a0a59" class="category-card" target="_blank" rel="noopener noreferrer">
         <h3>Labs</h3>
-        <p>Custom scripts, utilities, and security tooling.</p>
+        <p>Course labs, knowledge base, playbooks, custom scripts, utilities, and security tooling.</p>
         <span>Explore lab database →</span>
       </a>
     </div>
@@ -84,23 +87,48 @@
   <!-- EXPERIENCE -->
   <section id="experience" class="container">
     <h2>Experience</h2>
-    <p>
-      Cybersecurity Training and Mentorship <br> 
-      Makatob IT Securities <br>
-      (Oct 2025 - Present)</br>
-      <br>
-      Volunteer Technical Assistant <br>
-      ComplyFest <br>
-      June 2026 <br>
-      <br>
-      Hands-on cybersecurity lab development focused on vulnerability exploitation, network traffic analysis, and system hardening. </br>
-      <br>
-      Built and tested real-world attack scenarios in controlled environments to strengthen both offensive and defensive security skills.<br>
-      <br>
-      Developed and documented practical exercises for penetration testing, ethical hacking, and security analysis.
-      
-
+    <p class="section-subtitle">
+      Selected roles and contributions that reflect my hands-on work in cybersecurity training, mentoring, and practical lab development.
     </p>
+    <div class="experience-list">
+      <article class="experience-item">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <div>
+              <h3>Cybersecurity Training &amp; Mentorship</h3>
+              <p class="exp-org">Makatob IT Securities</p>
+            </div>
+            <span class="exp-date">Oct 2025 – Present</span>
+          </div>
+          <p>
+
+          </p>
+        </div>
+      </article>
+
+      <article class="experience-item">
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <div>
+              <h3>Volunteer: Technical Team</h3>
+              <p class="exp-org">ComplyFest</p>
+            </div>
+            <span class="exp-date">June 2026</span>
+          </div>
+          <p>
+            Supported technical coordination and event operations while helping participants engage with practical cybersecurity activities.
+          </p>
+          <p>
+            Operated in a live environment by monitoring wireless communication systems (Detection), identifying and diagnosing signal/frequency interference (Analysis), and executing real-time remediation to restore stable audio channels (Response).
+          </p>
+          <p> 
+            Maintained uninterrupted session delivery through proactive frequency management and sound isolation controls (Operational Continuity), aligning with core SOC functions of monitoring, incident handling, and system integrity assurance.
+          </p>
+        </div>
+      </article> 
+    </div>
   </section>
 
   <!-- CERTIFICATIONS -->
@@ -211,7 +239,7 @@ const navLinks = document.querySelectorAll(".nav-links a");
 window.addEventListener("scroll", () => {
   let current = "";
   sections.forEach(section => {
-    const sectionTop = section.offsetTop - 100;
+    const sectionTop = section.offsetTop - 96;
     if (scrollY >= sectionTop) {
       current = section.getAttribute("id");
     }

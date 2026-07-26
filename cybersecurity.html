@@ -37,43 +37,135 @@
     <a href="index.html" class="back-link">← Back</a>
     <h1>Cybersecurity Case Files</h1>
     <p class="section-subtitle">
-      Practical investigations into vulnerabilities, exploitation techniques, and defensive countermeasures.
+      Hands-on projects and practical investigations into network traffic, secure & insecure protocols, cloud technologies,vulnerabilities, system hardening, exploitation techniques, and defensive countermeasures.
     </p>
   </div>
 
-  <div class="project-list">
-
     <div class="project-card">
       <p class="case-label">CASE FILE</p>
-      <h3>GVM Vulnerability Exploitation</h3>
+      <h3>Wireshark Traffic Analysis</h3>
       <p>
-        Conducted vulnerability assessment using OpenVAS (GVM), identified critical exposure,
-        and validated risk through controlled exploitation. Mapped findings to CVE data.
+        In this project, I used Wireshark to capture and analyze basic network traffic from a local machine. The traffic includes DNS queries, HTTP requests, TCP handshakes and TLS client Hello communication.
       </p>
-      <p class="tags">GVM · CVE · Exploitation · Linux</p>
-      <a href="#">View Documentation →</a>
+      <p class="tags">Wireshark · Browser</p>
+      <a href="https://github.com/chukwupg/wireshark-traffic-analysis">View Documentation →</a>
     </div>
 
     <div class="project-card">
       <p class="case-label">CASE FILE</p>
       <h3>Advanced Network Traffic Analysis</h3>
       <p>
-        Analyzed DNS tunneling, FTP, and encrypted traffic using Wireshark to identify anomalies
-        and covert communication techniques.
+        In my Wireshark Traffic Analysis project, I captured and analyzed basic HTTP/HTTPS traffic, identifying DNS requests, valid handshakes, and TLS communication. </br>
+        In this project, I built on those foundations by analyzing DNS, FTP, ICMP, HTTP, and HTTPS traffic, compared secure vs insecure protocols (HTTP vs HTTPS), examined suspicious PCAP samples, identified DNS tunneling behavior, and practiced using custom Wireshark filters to speed up investigations.
       </p>
-      <p class="tags">Wireshark · DNS · Traffic Analysis</p>
-      <a href="#">View Documentation →</a>
+      <p class="tags">Wireshark · tcpdump · nslookup · ping · traceroute · dig · Filezilla</p>
+      <a href="https://github.com/chukwupg/advanced-network-traffic-analysis">View Documentation →</a>
     </div>
 
     <div class="project-card">
       <p class="case-label">CASE FILE</p>
-      <h3>SSH Hardening Lab</h3>
+      <h3>Securing S3 Bucket & IAM</h3>
       <p>
-        Hardened SSH configuration with UFW and Fail2Ban, reducing attack surface and preventing brute-force attempts.
+        In this project, I demonstrated how misconfigured S3 buckets and overly permissive IAM policies can lead to security issues, and how to fix them following the principle of least privilege.
       </p>
-      <p class="tags">Linux · SSH · Hardening</p>
-      <a href="#">View Documentation →</a>
+      <p class="tags">Cloud Security · AWS Management Console · S3 Bucket · AWS CLI · IAM</p>
+      <a href="https://github.com/chukwupg/securing-s3-bucket">View Documentation →</a>
     </div>
+
+    <div class="project-card">
+      <p class="case-label">CASE FILE</p>
+      <h3>Root Account Monitoring with CloudTrail + SNS</h3>
+      <p>
+        Built a real-time monitoring and alerting system to detect AWS root account usage using CloudTrail, EventBridge, and SNS. 
+        Simulated sensitive root activity, captured logs in S3, and configured automated alerts to notify me instantly whenever the root account is used, demonstrating how to improve visibility and security for high-risk actions in AWS.
+      </p>
+      <p class="tags">Cloud Security · AWS Management Console · S3 Bucket · CloudTrail · EventBridge · SNS</p>
+      <a href="https://github.com/chukwupg/root-account-monitoring-aws">View Documentation →</a>
+    </div>
+
+    <div class="project-card">
+      <p class="case-label">CASE FILE</p>
+      <h3>Cybersecurity Awareness</h3>
+      <p>
+        This repository is a collection of guides, resources, and visuals designed to promote safe online practices for everyday users. <br>
+        It covers topics such as password management, phishing awareness, secure browsing, social media safety, and data protection, aiming to educate individuals on how to protect themselves in the digital world. <br>
+        It blends general awareness tips for everyday users with technical resources for IT professionals and cybersecurity enthusiasts.
+      </p>
+      <p class="tags">Cybersecurity · Awareness · Education · Digital Safety</p>
+      <a href="https://github.com/chukwupg/cybersecurity-awareness">View Documentation →</a>
+    </div>
+
+    <div class="project-card">
+      <p class="case-label">CASE FILE</p>
+      <h3>Securing Remote SSH Access on Kali Linux VM</h3>
+      <p>
+        In this project, I documented the process of setting up and securing remote SSH access on a Kali Linux virtual machine. 
+        I detailed best practices for SSH configuration, firewall setup, and brute-force protection using Fail2Ban which provides a solid foundation in Linux system hardening.
+      </p>
+      <p class="tags">System Hardening · Kali Linux · Firewall · SSH · Fail2ban</p>
+      <a href="https://github.com/chukwupg/secure-ssh-kali">View Documentation →</a>
+    </div>
+
+    <div class="project-card">
+      <p class="case-label">CASE FILE</p>
+      <h3>ADS Stealth Techniques and Detection Lab</h3>
+      <p>
+        This is a hands-on cybersecurity and digital forensics project focused on Windows NTFS Alternate Data Stream (ADS). <br> 
+        The goal is to understand how ADS can be abused for covert storage, stealthy payload execution, malware persistence, and how defenders can detect and eliminate ADS-based threats.
+      </p>
+      <p class="tags">Windows OS · Sysinternals Suite · PowerShell · CMD · </p>
+      <a href="https://github.com/chukwupg/ADS-Stealth-Techniques-and-Detection-Lab">View Documentation →</a>
+    </div>
+
+    <div class="project-card">
+      <p class="case-label">CASE FILE</p>
+      <h3>Password Policy Enforcer</h3>
+      <p>
+        This project validates passwords against customizable security policies, including length, complexity, repetition, and sequential patterns. 
+        It implements zxcvbn and HIBP which enforces modern security controls used in real enterprise environments. 
+        It is designed as a foundational security utility and a learning project focused on secure authentication practices.
+      </p>
+      <p class="tags">Password Policy · Password Security · Virtual Environment (venv)· Python · zxcvbn · HIBP</p>
+      <a href="https://github.com/chukwupg/password-policy-enforcer">View Documentation →</a>
+    </div>
+
+    <div class="project-card">
+      <p class="case-label">CASE FILE</p>
+      <h3>MD5 Hash Investigation: Incident Response & Malware Analysis</h3>
+      <p>
+        This lab documents a hands-on incident response and malware analysis investigation triggered by Intrusion Prevention System (IPS) alerts. <br>
+
+        The focus of the lab is the validation of MD5 hash-based Indicators of Compromise (IOCs) to determine whether associated files are malicious, suspicious, or benign using sandbox analysis and threat intelligence techniques.
+      </p>
+      <p class="tags">ANY.RUN · Threat Intelligence · Mitre ATT&CK Framework</p>
+      <a href="https://github.com/chukwupg/MD5-Hash-Investigation-Using-ANY.RUN">View Documentation →</a>
+    </div>
+
+    <div class="project-card">
+      <p class="case-label">CASE FILE</p>
+      <h3>Network Intrusion Detection & Correlation Project</h3>
+      <p>
+        Built a hands-on Blue Team lab simulating real-world attacks and detection. 
+        Used Suricata IDS and system logs to analyze reconnaissance, SSH brute-force, and web activity, correlating events to reconstruct an attack timeline and assess detection effectiveness.
+      </p>
+      <p class="tags">Ubuntu Server · Kali Linux · Nmap · Hydra · Suricata</p>
+      <a href="https://github.com/chukwupg/network-intrusion-detection-lab">View Documentation →</a>
+    </div>
+
+    <div class="project-card">
+      <p class="case-label">CASE FILE</p>
+      <h3>Distributed Pentesting Lab</h3>
+      <p>
+        <i>In-Progress</i> 
+      </p>
+      <p>
+        Ongoing project to build a distributed penetration testing lab environment for simulating real-world attack scenarios.
+      </p>
+      <p class="tags">Metasploitable2 · OWASP Juice Shop · Nmap · enum4linux · smbclient · Nikto</p>
+      <a href="https://github.com/chukwupg/distributed-pentesting-lab-setup">View Documentation →</a>
+    </div>
+
+    <br>
 
   </div>
 
