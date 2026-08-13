@@ -634,6 +634,29 @@ footer p {
   text-transform: uppercase;
   margin-bottom: 12px;
 }
+.project-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+.recent-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(72, 174, 255, 0.12);
+  border: 1px solid rgba(72, 174, 255, 0.35);
+  color: var(--blue-700);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
 .project-card h3 {
   font-family: var(--font-sans);
   font-size: 24px;
@@ -641,7 +664,7 @@ footer p {
   line-height: 32px;
   letter-spacing: -0.96px;
   color: var(--gray-1000);
-  margin-bottom: 12px;
+  margin-bottom: 0;
 }
 .project-card p {
   font-family: var(--font-sans);
