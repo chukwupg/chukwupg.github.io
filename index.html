@@ -124,12 +124,15 @@
           <p>
             Supported technical coordination and event operations while helping participants engage with practical cybersecurity activities.
           </p>
-          <p>
-            Operated in a live environment by monitoring wireless communication systems (Detection), identifying and diagnosing signal/frequency interference (Analysis), and executing real-time remediation to restore stable audio channels (Response).
-          </p>
-          <p> 
-            Maintained uninterrupted session delivery through proactive frequency management and sound isolation controls (Operational Continuity), aligning with core SOC functions of monitoring, incident handling, and system integrity assurance.
-          </p>
+          <div class="exp-more">
+            <p>
+              Operated in a live environment by monitoring wireless communication systems (Detection), identifying and diagnosing signal/frequency interference (Analysis), and executing real-time remediation to restore stable audio channels (Response).
+            </p>
+            <p> 
+              Maintained uninterrupted session delivery through proactive frequency management and sound isolation controls (Operational Continuity), aligning with core SOC functions of monitoring, incident handling, and system integrity assurance.
+            </p>
+          </div>
+          <button class="exp-toggle" type="button" aria-expanded="false">Read more</button>
         </div>
       </article> 
       <article class="experience-item">
@@ -145,21 +148,21 @@
           <p>
             Completed a practical cybersecurity internship focused on offensive security, vulnerability analysis, and real-world attack simulation. 
           </p>
-          <p>
-            Worked across web application security, network analysis, binary inspection, and wireless security testing using industry-standard tools and methodologies (PTES-aligned). 
-          </p>
-          <p>
-            Performed end-to-end assessments; from reconnaissance and enumeration to exploitation and reporting, identifying critical vulnerabilities such as SQL Injection, Cross-Site Scripting (XSS), and insecure credential transmission. 
-          </p>
-          <p>  
-            Conducted Portable Executable (PE) analysis to identify entry point addresses, and conducted Wi-Fi security auditing by capturing WPA handshakes and performing password cracking using custom wordlists in a controlled lab environment.
-          </p>
-          <p> 
-            Built reproducible labs and produced structured technical reports documenting findings, impact, and remediation strategies.
-          </p>
-          <p>
-            
-          </p>
+          <div class="exp-more">
+            <p>
+              Worked across web application security, network analysis, binary inspection, and wireless security testing using industry-standard tools and methodologies (PTES-aligned). 
+            </p>
+            <p>
+              Performed end-to-end assessments; from reconnaissance and enumeration to exploitation and reporting, identifying critical vulnerabilities such as SQL Injection, Cross-Site Scripting (XSS), and insecure credential transmission. 
+            </p>
+            <p>  
+              Conducted Portable Executable (PE) analysis to identify entry point addresses, and conducted Wi-Fi security auditing by capturing WPA handshakes and performing password cracking using custom wordlists in a controlled lab environment.
+            </p>
+            <p> 
+              Built reproducible labs and produced structured technical reports documenting findings, impact, and remediation strategies.
+            </p>
+          </div>
+          <button class="exp-toggle" type="button" aria-expanded="false">Read more</button>
         </div>
       </article>
     </div>
@@ -273,6 +276,21 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 themeToggle.addEventListener('click', toggleTheme);
+
+// ===== EXPERIENCE READ MORE =====
+const expToggleButtons = document.querySelectorAll('.exp-toggle');
+
+expToggleButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const card = button.closest('.exp-card');
+    const extra = card.querySelector('.exp-more');
+    const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+    button.setAttribute('aria-expanded', String(!isExpanded));
+    button.textContent = isExpanded ? 'Read more' : 'Read less';
+    extra.classList.toggle('open', !isExpanded);
+  });
+});
 
 // ===== SCROLL SPY =====
 const sections = document.querySelectorAll("section[id]");
