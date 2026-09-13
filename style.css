@@ -513,13 +513,13 @@ section p + p { margin-top: 16px; }
 .skill-group {
   padding: 24px;
   border-radius: 6px;
-  border: 1px solid var(--gray-alpha-200);
+  border: 1px solid rgba(243, 240, 241, 0.12);
   background: var(--bg-100);
   transition: all 150ms cubic-bezier(0.175, 0.885, 0.32, 1.1);
 }
 .skill-group:hover {
-  background: var(--bg-200);
-  border-color: var(--gray-alpha-400);
+  background: rgba(248, 247, 247, 0.02);
+  border-color: rgba(243, 241, 241, 0.24);
 }
 .skill-group h4 {
   font-family: var(--font-sans);
@@ -538,6 +538,24 @@ section p + p { margin-top: 16px; }
   line-height: 20px;
   color: var(--gray-700);
   max-width: none;
+}
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.chip-list span {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(180, 174, 174, 0.08);
+  border: 1px solid rgba(245, 240, 241, 0.2);
+  color: var(--gray-900);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
 }
 
 /* ===== FOOTER ===== */
