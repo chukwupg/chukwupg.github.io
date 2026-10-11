@@ -44,8 +44,49 @@
   <div class="project-card">
       <p class="case-label">CASE FILE</p>
       <div class="project-header">
-        <h3>Cowrie Honeypot Attack Detection Lab</h3>
+        <h3>AWS IAM Privilege Escalation Simulation</h3>
         <span class="recent-badge">Most Recent</span>
+      </div>
+      <p>
+        AWS IAM privilege escalation lab demonstarting how a misconfigured iam:PassRole policy can be exploited to escalate from a low privilege user to full AdministratorAccess via EC2 and the instance metadata service, and how this can be prevented with a verified least privilege policy.
+      </p>
+      <p class="tags">Cloud Pentest · AWS · IAM · Exploitation Technique · Least Privilege</p>
+      <a href="https://github.com/chukwupg/aws-iam-privilege-escalation-simulation">View Documentation →</a>
+  </div>
+
+  <div class="project-card">
+      <p class="case-label">CASE FILE</p>
+      <div class="project-header">
+        <h3>DVWA & PrestaShop Security Audit</h3>
+        <span class="recent-badge">Recent</span>
+      </div>
+      <p>
+        A two part web application security project: </br>     
+        Part one demonstrates SQL Injection and XSS exploitation against DVWA, and the deployment and validation of ModSecurity WAF to detect and block both vulnerabilities. <br>
+        Part two is a full security assessment of a live PrestaShop deployment on AWS, including a completed defensive hardening checklist and a documented attack simulation that confirms a critical, unpatched stored XSS vulnerability, plus missing TLS and login rate limiting.
+      </p>
+      <p class="tags">AWS · PrestaShop · Docker · DVWA · ModSecurity · DevTools </p>
+      <a href="https://github.com/chukwupg/dvwa-prestashop-security-audit">View Documentation →</a>
+  </div>
+
+  <div class="project-card">
+      <p class="case-label">CASE FILE</p>
+      <div class="project-header">
+        <h3>DVWA Vulnerability Assessment Lab</h3>
+      </div>
+      <p>
+        A hands-on lab demonstrating a full vulnerability management lifecycle: deploying an intentionally vulnerable web application (DVWA), performing an automated vulnerability scan using OpenVAS/GVM, 
+        manually discovering and exploiting a vulnerability using Metasploit, and producing a remediation plan, all within an isolated virtual lab network
+      </p>
+      <p class="tags">Docker · DVWA · OpenVAS · Metasploit </p>
+      <a href="https://github.com/chukwupg/dvwa-vulnerability-assessment-lab">View Documentation →</a> 
+  </div>
+
+
+  <div class="project-card">
+      <p class="case-label">CASE FILE</p>
+      <div class="project-header">
+        <h3>Cowrie Honeypot Attack Detection Lab</h3>
       </div>
       <p>
         Designed and deployed a Cowrie SSH honeypot on an isolated virtual network to study real-world attack behavior in a controlled environment. 
@@ -61,7 +102,6 @@
       <p class="case-label">CASE FILE</p>
       <div class="project-header">
         <h3>PrestaShop Deployment on AWS (EC2 + RDS)</h3>
-        <span class="recent-badge">Recent</span>
       </div>
       <p>
         Designed and deployed a fully functional e-commerce platform on AWS using a two-tier architecture that separates the application and database layers for improved scalability and security. 
